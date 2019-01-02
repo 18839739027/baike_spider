@@ -21,6 +21,6 @@ class HtmlDownloader(object):
         response = requests.get(url, headers=headers)
         if response.status_code != 200:
             raise Exception(f'请求失败， code{response.status_code}')
-        return response.text
+        return response.content.decode(encoding='utf-8')
 
 

@@ -5,14 +5,18 @@
 # @Software: PyCharm
 
 import time
-from . import html_downloader, html_outputer, html_parser, url_manager
+from html_downloader import HtmlDownloader
+from html_outputer import HtmlOutputer
+from html_parser import HtmlParser
+from url_manager import UrlManager
+
 
 class SpiderMain(object):
     def __init__(self):
-        self.urls = url_manager.UrlManager()
-        self.downloader = html_downloader.HtmlDownloader()
-        self.parser = html_parser.HtmlParser()
-        self.output = html_outputer.HtmlOutputer()
+        self.urls = UrlManager()
+        self.downloader = HtmlDownloader()
+        self.parser = HtmlParser()
+        self.output = HtmlOutputer()
 
     def craw(self, root_url, page_amount=5, time_sleep=None):
         count = 1
