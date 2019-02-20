@@ -1,2 +1,3 @@
 # baike_spider
-百科爬虫
+Wikipedia crawler
+Based on my own understanding of scrapy framework, I wrote a general framework structure.
